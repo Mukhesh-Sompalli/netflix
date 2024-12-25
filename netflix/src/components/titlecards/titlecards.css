@@ -1,0 +1,87 @@
+/* General Styling for the Title Section */
+.title_cards {
+    margin-top: 50px;
+    bottom: -50px;
+    position: relative;
+}
+
+/* Title Text Styling */
+.title_cards h2 {
+    margin-bottom: 8px;
+}
+
+
+.cards_list {
+    display: flex;
+    gap: 10px;
+    overflow-x: hidden; 
+    -webkit-overflow-scrolling: touch; 
+    padding-bottom: 10px; 
+    width: calc(150px * 7 + 10px * 6); 
+    box-sizing: border-box; 
+    cursor: pointer;
+    scroll-snap-type: x mandatory; 
+    transition: overflow-x 0.3s ease; 
+}
+
+/* Show horizontal scrollbar on hover */
+.cards_list:hover {
+    overflow-x: auto; /* Show scrollbar only on hover */
+}
+
+/* Hide Scrollbar Completely */
+.cards_list::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers */
+}
+
+/* Hide scrollbar in Firefox */
+.cards_list {
+    scrollbar-width: none; /* For Firefox to hide the scrollbar */
+}
+
+/* Styling Each Card */
+.cards_list .card {
+    position: relative;
+    flex-shrink: 0; /* Prevent the card from shrinking */
+    width: 150px; /* Fixed width for each card */
+    height: 225px; /* Fixed height for each card */
+    background-color: #000; /* Default background color */
+    border-radius: 10px; /* Rounded corners for the card */
+    overflow: hidden; /* Ensures no content overflows the card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+    cursor: pointer; /* Adds a pointer cursor on hover */
+    transition: transform 0.3s ease-in-out; /* Optional: Smooth scale on hover */
+    scroll-snap-align: center; /* Ensures the card is centered when scrolling */
+}
+
+/* Hover Effect to Scale Cards */
+.cards_list .card:hover {
+    transform: scale(1.05); /* Slightly scale the card on hover */
+}
+
+/* Styling the Image Inside Each Card */
+.cards_list img {
+    width: 100%; /* Ensure image takes up full width */
+    height: 100%; /* Ensure image takes up full height */
+    object-fit: cover; /* Ensures the image fits within the card without distorting */
+}
+
+/* Styling the Text (Name) at the Bottom of the Card */
+.cards_list .card p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px; /* Position the text on the left bottom corner */
+    font-size: 16px;
+    font-weight: bold;
+    color: white; /* Text color */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    padding: 5px 10px;
+    border-radius: 5px; /* Rounded corners for the text background */
+}
+
+/* Optional: Additional styles for the body or parent container */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Adjust font family */
+}

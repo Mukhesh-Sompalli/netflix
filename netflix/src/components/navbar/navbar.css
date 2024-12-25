@@ -1,0 +1,100 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #141414; 
+}
+
+/* Left Section */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar-logo {
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.navbar-links li {
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Right Section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-text {
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.navbar-icon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.navbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.navbar-caret {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+
+
+/* Show dropdown when visible */
+.navbar-profile .dropdown {
+  display: block;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #141414;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1;
+  color: white;
+  display: flex; /* Flexbox to align items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 10px; /* Space between items */
+  box-shadow: 0px 4px 6
+  px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown text */
+.dropdown p {
+  font-size: 14px;
+  margin: 0;
+  cursor: pointer;
+}
+
