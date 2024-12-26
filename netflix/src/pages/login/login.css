@@ -1,0 +1,107 @@
+/* Full height login page with background image */
+.login {
+    height: 100vh; /* Full screen height */
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.6), /* Overlay color with transparency */
+        rgba(0, 0, 0, 0.6) /* Overlay color with transparency */
+    ), url(../../assets1/netflix-baground.jpg); /* Background image */
+    background-size: cover; /* Ensure the background covers the whole page */
+    background-position: center; /* Center the background image */
+    display: flex;
+    justify-content: center; /* Center the login form horizontally */
+    align-items: center; /* Center the login form vertically */
+    flex-direction: column; /* Stack the logo and form vertically */
+    position: relative; /* Allow positioning of the logo */
+}
+
+/* Logo styling */
+.login-logo {
+    position: absolute; /* Position the logo at the top left */
+    top: 20px; /* Add space from the top */
+    left: 20px; /* Add space from the left */
+    width: 150px;
+    margin-bottom: 20px; /* Optional: Add space between logo and form */
+}
+
+/* Styling for the login form container */
+.login_form {
+    width: 100%;
+    max-width: 450px; /* Reduced max-width to fit form content */
+    background: rgba(0, 0, 0, 0.75); /* Semi-transparent black background */
+    border-radius: 8px; /* Rounded corners for the form */
+    padding: 40px 60px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Added shadow for a better look */
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    justify-content: space-between; /* Ensure equal spacing between elements */
+    height: auto;
+}
+
+/* Heading style inside the login form */
+.login_form h1 {
+    font-size: 32px;
+    text-align: center;
+    font-weight: 600; /* Strong font weight */
+    color: white;
+    margin-bottom: 28px;
+}
+
+/* Style for input fields */
+.login_form input {
+    width: 100%; /* Make inputs take the full width */
+    height: 50px; /* Equal height for inputs */
+    padding: 12px; /* Add padding for better appearance */
+    margin-bottom: 12px; /* Add space between inputs */
+    border: 1px solid #333; /* Dark border for input fields */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #333; /* Dark background for inputs */
+    color: white; /* White text inside inputs */
+    font-size: 16px; /* Increase font size for readability */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Button style */
+.login_form button {
+    width: 100%;
+    height: 50px; /* Same height as inputs */
+    padding: 16px;
+    outline: 0;
+    background-color: #e50914; /* Netflix red color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px; /* Space below the button */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.login_form button:hover {
+    background-color: #f40612; /* Darker red for hover effect */
+}
+
+/* Styling for the help section (Remember me & Need Help) */
+.for_help {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    color: white;
+    width: 100%; /* Ensure full width for spacing */
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+}
+
+.remember input {
+    margin-right: 5px; /* Space between checkbox and label */
+}
+
+/* Optional: Add some hover effects or focus effects on inputs */
+.login_form input:focus {
+    border-color: #e50914; /* Highlight border with red color */
+    outline: none; /* Remove default outline */
+}
