@@ -1,7 +1,7 @@
 /* General Styling for the Title Section */
 .title_cards {
-    margin-top: 50px;
-    bottom: -50px;
+    margin-top: 10px; /* Reduced the space above the cards */
+    bottom: 60px;
     position: relative;
 }
 
@@ -10,18 +10,21 @@
     margin-bottom: 8px;
 }
 
-
+/* Cards List Styling */
 .cards_list {
     display: flex;
-    gap: 10px;
+    gap: 10px; /* Gap between the cards */
     overflow-x: hidden; 
     -webkit-overflow-scrolling: touch; 
     padding-bottom: 10px; 
-    width: calc(150px * 7 + 10px * 6); 
+    width: calc(150px * 7 + 10px * 6 + 20px); /* Adjust width to account for the right padding */
     box-sizing: border-box; 
     cursor: pointer;
     scroll-snap-type: x mandatory; 
     transition: overflow-x 0.3s ease; 
+    padding-left: 20px; /* Space on the left */
+    padding-right: 20px; /* Space on the right (adjusted) */
+    margin-top: 2px; /* Reduced the space above the cards list */
 }
 
 /* Show horizontal scrollbar on hover */
@@ -48,7 +51,7 @@
     background-color: #000; /* Default background color */
     border-radius: 10px; /* Rounded corners for the card */
     overflow: hidden; /* Ensures no content overflows the card */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
     cursor: pointer; /* Adds a pointer cursor on hover */
     transition: transform 0.3s ease-in-out; /* Optional: Smooth scale on hover */
     scroll-snap-align: center; /* Ensures the card is centered when scrolling */
@@ -84,4 +87,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif; /* Adjust font family */
+}
+
+/* Parent Container for Blockbuster Movies Section */
+.blockbuster-container {
+    margin-top: 0; /* Completely remove the gap above the section */
+    padding-top: 5px; /* Optional: Add a small padding if needed */
 }
