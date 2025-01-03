@@ -1,0 +1,47 @@
+/* General layout for the player */
+.player {
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #000; /* Black background for full-screen effect */
+    position: relative; /* Allows for proper positioning of child elements */
+    overflow: hidden; /* Prevents overflow if content exceeds screen */
+}
+
+/* Back arrow styling */
+.player img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    cursor: pointer;
+    z-index: 10; /* Ensures the back arrow appears above the video */
+}
+
+/* Full-screen video iframe */
+.player-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the iframe fill the entire screen */
+    height: 100%; /* Make the iframe fill the entire screen */
+    border: none; /* Remove default border */
+    z-index: 5; /* Keep video behind details and back arrow */
+}
+
+/* Video details styling */
+.player-details {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff; /* White text for visibility */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for text */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10; /* Ensures text is above the video */
+    font-size: 1rem;
+    max-width: 80%; /* Optional: Ensures text doesn't overflow */
+}

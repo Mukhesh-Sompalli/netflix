@@ -23,13 +23,15 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './home/home';
 import Login from '../pages/login/login';
+import Player from '../pages/player/player';
 
 function App() {
   return (
     <Router> {/* Wrapping everything inside Router */}
       <Routes> {/* Define your routes */}
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={< Login/>} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/player/:id" element={<Player />} /> {/* Correctly closed */}
       </Routes>
     </Router>
   );
