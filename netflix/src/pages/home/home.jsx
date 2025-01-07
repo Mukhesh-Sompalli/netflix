@@ -36,6 +36,7 @@ import hero_title from '../../assets1/hero_title.jpg';
 import play_icon from '../../assets1/button.jpg'; // Replace with your actual play icon image path
 import info_icon from '../../assets1/moreinfo.jpg'; // Replace with your actual info icon image path
 import Titlecards from '../../components/titlecards/titlecards';
+
 import Footer from '../../components/footer/footer';
 
 const Home = () => {
