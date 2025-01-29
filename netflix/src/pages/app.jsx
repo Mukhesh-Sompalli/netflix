@@ -149,8 +149,69 @@
 
 
 
+// import React, { useEffect, useState } from 'react';
+// import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+// import Home from './home/home';
+// import Login from '../pages/login/login';
+// import Player from '../pages/player/player';
+// import { onAuthStateChanged } from 'firebase/auth';
+// import { auth } from '../firebase';
+
+// const App = () => {
+//   const navigate = useNavigate(); // Hook to programmatically navigate
+//   const [user, setUser] = useState(null); // State to track user authentication
+
+//   useEffect(() => {
+//     const unsubscribe = onAuthStateChanged(auth, (user) => {
+//       if (user) {
+//         console.log("Logged In");
+//         setUser(user); // Update state when logged in
+//       } else {
+//         console.log("Logged Out");
+//         setUser(null); // Clear user state when logged out
+//       }
+//     });
+
+//     return () => unsubscribe(); // Cleanup on unmount
+//   }, []);
+
+//   // Function to handle video click (to navigate to the player page)
+//   const handleVideoClick = (videoId) => {
+//     // Navigate to a player page, passing videoId in the URL
+//     navigate(`/player/${videoId}`); // Use dynamic video ID
+//   };
+
+//   return (
+//     <div>
+//       <Routes>
+//         <Route path='/' element={<Home />} />
+//         <Route path='/login' element={<Login />} />
+//         <Route path='/player/:id' element={<Player />} />
+//       </Routes>
+//     </div>
+//   );
+// };
+
+// const AppWrapper = () => {
+//   return (
+//     <Router> {/* Wrapping everything inside Router */}
+//       <App />
+//     </Router>
+//   );
+// };
+
+// export default AppWrapper;
+
+
+
+
+
+
+
+
+
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate, Navigate } from 'react-router-dom';
 import Home from './home/home';
 import Login from '../pages/login/login';
 import Player from '../pages/player/player';
@@ -158,35 +219,34 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../firebase';
 
 const App = () => {
-  const navigate = useNavigate(); // Hook to programmatically navigate
-  const [user, setUser] = useState(null); // State to track user authentication
+  const navigate = useNavigate();
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         console.log("Logged In");
-        setUser(user); // Update state when logged in
+        setUser(user);
       } else {
         console.log("Logged Out");
-        setUser(null); // Clear user state when logged out
+        setUser(null);
+        navigate('/login');
       }
     });
 
-    return () => unsubscribe(); // Cleanup on unmount
-  }, []);
+    return () => unsubscribe();
+  }, [navigate]);
 
-  // Function to handle video click (to navigate to the player page)
   const handleVideoClick = (videoId) => {
-    // Navigate to a player page, passing videoId in the URL
-    navigate(`/player/${videoId}`); // Use dynamic video ID
+    navigate(`/player/${videoId}`);
   };
 
   return (
     <div>
       <Routes>
-        <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/player/:id' element={<Player />} />
+        <Route path='/' element={user ? <Home /> : <Navigate to="/login" />} />
+        <Route path='/player/:id' element={user ? <Player /> : <Navigate to="/login" />} />
       </Routes>
     </div>
   );
@@ -194,7 +254,7 @@ const App = () => {
 
 const AppWrapper = () => {
   return (
-    <Router> {/* Wrapping everything inside Router */}
+    <Router>
       <App />
     </Router>
   );

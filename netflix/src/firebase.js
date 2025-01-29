@@ -51,6 +51,7 @@ const login = async (email, password) => {
 const logout = async () => {
     try {
         await signOut(auth);
+        
         console.log("User signed out successfully");
     } catch (error) {
         console.error("Error during logout:", error.message);
