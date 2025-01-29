@@ -23,12 +23,12 @@ const Player = () => {
     const videoMap = {
       '1': { src: video1, title: 'Game of Thrones' },
       '2': { src: video2, title: 'Forrest Gump' },
-      '3': { src: video3, title: 'Joker' },
+      '3': { src: video3, title: 'Jokerss' },
       '4': { src: video4, title: 'MS Dhoni: The Untold Story' },
       '5': { src: video5, title: 'Harry Potter' },
       '6': { src: video6, title: 'The Lord of the Rings' },
       '7': { src: video7, title: 'Avengers: Infinity War' },
-      '8': { src: video8, title: 'The Bodyguard' },
+      '8': { src: video8, title: 'Mad 2' },
       '9': { src: video9, title: 'Warm Bodies' },
       '10': { src: video10, title: 'Money Heist' },
     };
@@ -101,7 +101,7 @@ const playerContainerStyle = {
 const videoStyle = {
   width: '100%',
   height: 'auto', // Maintain aspect ratio
-  maxHeight: '100vh', // Ensure it fits within the viewport height
+  maxHeight: '90vh', // Ensure it fits within the viewport height
 };
 
 export default Player;

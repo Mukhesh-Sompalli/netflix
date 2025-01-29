@@ -97,7 +97,7 @@ import video4Thumbnail from '../../assets1/thumbnails/vedio4.jpg';
 import video5Thumbnail from '../../assets1/thumbnails/vedio5.jpg';
 import video6Thumbnail from '../../assets1/thumbnails/vedio6.jpg';
 import video7Thumbnail from '../../assets1/thumbnails/vedio7.jpg';
-import video8Thumbnail from '../../assets1/thumbnails/vedio9.jpg';
+import video8Thumbnail from '../../assets1/thumbnails/vedio8.jpg';
 import video9Thumbnail from '../../assets1/thumbnails/vedio9.jpg';
 import video10Thumbnail from '../../assets1/thumbnails/vedio10.jpg';
 
