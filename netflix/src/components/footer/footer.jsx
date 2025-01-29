@@ -47,7 +47,7 @@ import youtube_icon from '../../assets1/cards1/youtube_icon.jpg';
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="footer_icons">
+      <div className="footer-icons">
         <img src={facebook_icon} alt="Facebook Icon" />
         <img src={instagram_icon} alt="Instagram Icon" />
         <img src={twitter_icon} alt="Twitter Icon" />
@@ -73,3 +73,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

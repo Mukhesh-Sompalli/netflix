@@ -69,7 +69,6 @@
 
 
 
-
 import React, { useState } from 'react';
 import './navbar.css';
 import logo from '../../assets1/logo.png';
@@ -82,18 +81,16 @@ import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
-  const navigate = useNavigate();  // Hook for navigation
+  const navigate = useNavigate();
 
-  // Toggle dropdown visibility
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
   };
 
-  // Logout function
   const handleLogout = async () => {
     try {
-      await logout(); // Ensure this function is implemented to log out
-      navigate('/login'); // Redirect to login page
+      await logout();
+      navigate('/login');
     } catch (error) {
       console.error("Logout Error:", error);
     }
@@ -101,7 +98,6 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      {/* Left Section */}
       <div className="navbar-left">
         <img
           src={logo}
@@ -117,8 +113,6 @@ const Navbar = () => {
           <li>Browse by Languages</li>
         </ul>
       </div>
-
-      {/* Right Section */}
       <div className="navbar-right">
         <img
           src={search}

@@ -1,4 +1,3 @@
-// Player.jsx
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import backArrow from '../../assets1/cards1/backarrow.jpg'; // Corrected path
@@ -25,13 +24,13 @@ const Player = () => {
       '1': { src: video1, title: 'Game of Thrones' },
       '2': { src: video2, title: 'Forrest Gump' },
       '3': { src: video3, title: 'Joker' },
-      '4': { src: video4, title: 'MS DHONI' },
+      '4': { src: video4, title: 'MS Dhoni: The Untold Story' },
       '5': { src: video5, title: 'Harry Potter' },
       '6': { src: video6, title: 'The Lord of the Rings' },
-      '7': { src: video7, title: 'Infinity Saga' },
-      '8': { src: video8, title: 'THE Body form' },
-      '9': { src: video9, title: 'Video 9' },
-      '10': { src: video10, title: 'Video 10' },
+      '7': { src: video7, title: 'Avengers: Infinity War' },
+      '8': { src: video8, title: 'The Bodyguard' },
+      '9': { src: video9, title: 'Warm Bodies' },
+      '10': { src: video10, title: 'Money Heist' },
     };
 
     if (videoMap[id]) {
